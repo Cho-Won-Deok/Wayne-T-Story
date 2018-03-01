@@ -27,10 +27,9 @@
 			//console.log(this.answerObjArr);
 			//각 답변을 모아서 댓글 창에 넣어줌
 			$("textarea[name='comment']").val(this.getReply());
-
+			this.submit();
 		},
 		submit:function() {
-			this.setReply();
 			//로그인상태가 아니어서 이름/비번을 적어야 하면 자동으로 넣어주자.
 			var nameObj = $("#name");
 			if (nameObj.is(":visible")) {
