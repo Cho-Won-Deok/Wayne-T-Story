@@ -1,0 +1,40 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://rawgit.com/Cho-Won-Deok/Wayne-T-Story/master/wayneTstory.js"></script>
+	<!--script src="js/wayneTstory.js"></script-->
+	<script>
+		$(document).ready(function(){
+			//티스토리에 올릴 textarea의 name부분에 prefix되는 이름을 넣는다.
+			//나중에 이 이름을 이용해서 답변을 한번에 수집함.
+			wayneTstory.init('wayneAns_');
+			//id가 go 인 버튼이 눌리면 답변을 수집하고 confirm버튼을 누르도록 수행한다.
+			$("#go").on("click", function(){
+				wayneTstory.setReply();
+			});
+		});
+		//이건 그냥 예시
+		function addComment() {
+			alert('success!!!');
+		}
+	</script>
+</head>
+<body>
+문제1> 문제 쏼라 쏼라 아래에 답을 적으시오.<br>
+<textarea name="wayneAns_01">답변은 여기에 적히겠지.......</textarea><br>
+문제2> 문제 쏼라 쏼라 아래에 답을 적으시오.<br>
+<textarea name="wayneAns_02">답변은 여기에 적히겠지.......</textarea><br>
+문제3> 문제 쏼라 쏼라 아래에 답을 적으시오.<br>
+<textarea name="wayneAns_03">답변은 여기에 적히겠지.......</textarea><br>
+문제4> 문제 쏼라 쏼라 아래에 답을 적으시오.<br>
+<textarea name="wayneAns_04">답변은 여기에 적히겠지.......</textarea><br>
+문제5> 문제 쏼라 쏼라 아래에 답을 적으시오.<br>
+<textarea name="wayneAns_05">답변은 여기에 적히겠지.......</textarea><br>
+<br>
+<button id="go" class="">go</button>
+<textarea  name="comment" cols="50" rows="10"></textarea><br>
+<input type="text" name="name" id="name"/>
+<input type="password" name="password" id="password"/><br>
+<button class="btn_submit_b" onclick="addComment()">confirm버튼</button>
+</body>
+</html>
