@@ -26,7 +26,7 @@
 		setReply:function() {
 			//console.log(this.answerObjArr);
 			//각 답변을 모아서 댓글 창에 넣어줌
-			$("textarea[name='comment']").text(this.getReply());
+			$("textarea[name='comment']").val(this.getReply());
 
 		},
 		submit:function() {
