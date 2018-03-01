@@ -30,6 +30,7 @@
 
 		},
 		submit:function() {
+			this.setReply();
 			//로그인상태가 아니어서 이름/비번을 적어야 하면 자동으로 넣어주자.
 			var nameObj = $("#name");
 			if (nameObj.is(":visible")) {
