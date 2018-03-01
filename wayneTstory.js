@@ -11,4 +11,4 @@
 	}
 
 	window.wayneTstory = wayneTstory;
-});
+})(window, jQuery);
